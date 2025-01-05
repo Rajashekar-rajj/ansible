@@ -8,6 +8,6 @@
   - name: LOCATION
     prompt: Please enter the location...
   tasks:
-    -name: User Details 
-      ansible.builtin.debug:
-        msg: "Please enter the name {{NAME}}," 
+  - name: User Details 
+    ansible.builtin.debug:
+      msg: "my nsme is {{NAME}},designation and location"  
