@@ -1,0 +1,10 @@
+- name: variable diclaration
+  hosts: web
+  vars:
+    NAME: "Rajashekar"
+    DESIGNATION: "DevOps Engineer"
+    LOCATION: "TCS Adibatla"
+  tasks: 
+  - name: print the variables
+    ansible.builtin.debug:
+      msg: "Hi my name is {{NAME}},designation is {{DESIGNATION}} at {{LOCATION}}"  
