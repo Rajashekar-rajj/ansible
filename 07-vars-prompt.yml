@@ -1,0 +1,13 @@
+- name: variable with prompt
+  host: web
+  vars_prompt:
+  - name: NAME
+    prompt: Please enter the name
+  - name: DESIGNATION
+    prompt: Please enter the Designation....
+  - name: LOCATION
+    prompt: Please enter the location...
+  tasks:
+    -name: User Details 
+      ansible.builtin.debug:
+        msg: "Please enter the name {{NAME}}," 
