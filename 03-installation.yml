@@ -4,4 +4,4 @@
   - name: Install nginx
     ansible.builtin.package:
       name: nginx
-      tate: present    #hetrogenous module that work for all distors
+      state: present    #hetrogenous module that work for all distors
