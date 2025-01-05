@@ -1,15 +1,15 @@
 #PLAY-1 
-- name: ping the server
+- name: PLAY-1 TASK-1
   hosts: web #which host your ansible want connect
   tasks: #list of tasks/modules/collections
-  - name: ping the server
+  - name: PLAY-1 TASK-1
     ansible.builtin.ping:
-     # msg: "this is from PLAY-1 and TASK-1"
+      msg: "this is from PLAY-1 and TASK-1"
 
-#  #PLAY-2
-# - name: PLAY-1 TASK-2
-#   hosts: web
-#   tasks: 
-#    - name: PLAY-1 TASK-1
-#      ansible.builtin.ping:
-#       msg: "this is from PLAY-1 and TASK-2"
+ #PLAY-2
+- name: PLAY-1 TASK-2
+  hosts: web
+  tasks: 
+   - name: PLAY-1 TASK-2
+     ansible.builtin.ping:
+      msg: "this is from PLAY-1 and TASK-2"
