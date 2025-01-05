@@ -1,0 +1,6 @@
+- name: Install Nginx
+  hosts: web
+  tasks:
+   - name: nginx
+     ansible.builtin.package:
+     state: present    #hetrogenous module that work for all distors
