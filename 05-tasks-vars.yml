@@ -10,6 +10,7 @@
       msg: "Myname is {{NAME}}, designation -s {{DESIGNATION}} at {{LOCATION}}"
 
   - name: Variable override
+    vars:
       NAME: "Mekala Rajashekar"
     ansible.builtin.debug:
       msg:  "Myname is {{NAME}}, designation -s {{DESIGNATION}} at {{LOCATION}}"
