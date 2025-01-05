@@ -8,8 +8,8 @@
 
  #PLAY-2
 - name: PLAY-1 TASK-2
-   hosts: web
-   tasks: 
+  hosts: web
+  tasks: 
    - name: PLAY-1 TASK-1
      ansible.builtin.ping:
-      msg: "this is from PLAY-1 and TASK-1"
+      msg: "this is from PLAY-1 and TASK-2"
