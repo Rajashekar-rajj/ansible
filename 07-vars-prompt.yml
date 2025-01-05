@@ -3,11 +3,14 @@
   vars_prompt:
   - name: NAME
     prompt: Please enter the name
+    private: false #not confidencial
   - name: DESIGNATION
-    prompt: Please enter the Designation....
+    prompt: Please enter the Designation
+    private: false #not confidencial
   - name: LOCATION
-    prompt: Please enter the location...
+    prompt: Please enter the location
+    private: false #not confidencial
   tasks:
   - name: User Details 
     ansible.builtin.debug:
-      msg: "my nsme is {{NAME}},designation and location"  
+      msg: "my name is {{NAME}},designation and location"  
