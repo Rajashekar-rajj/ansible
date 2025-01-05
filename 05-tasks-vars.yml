@@ -6,7 +6,7 @@
     LOCATION: "TCS Adibatla"
   tasks:
   - name: variable parent
-    ansible.duiltin.debug:
+    ansible.builtin.debug:
       msg: "Myname is {{NAME}}, designation -s {{DESIGNATION}} at {{LOCATION}}"
 
   - name: Variable override
