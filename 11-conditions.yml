@@ -1,6 +1,6 @@
 - name: condition to find the values
   hosts: local
-  var_prompt:
+  vars_prompt:
     name: number
     prompt: "Please enter the number"
     private: false 
