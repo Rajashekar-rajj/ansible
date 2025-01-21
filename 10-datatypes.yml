@@ -19,4 +19,4 @@
   tasks:
   - name: data types declaration
     ansible.builtin.debug:
-     msg: "I am learning {{ cource }}, teacher is {{ Shiva }}, id {{ id }}, topics {{ topics }}, tools are {{ tools }}"
+     msg: "I am learning {{ cource }}, teacher is {{ teacher }}, id {{ id }}, topics {{ topics }}, tools are {{ tools }}"
