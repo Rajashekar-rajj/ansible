@@ -1,0 +1,21 @@
+- name: data types declaration
+  hosts: web
+  vars: 
+   cource: "DevOps" #string
+   teacher: "Shiva kumar"
+   id : 123 #int
+   topics: #list
+   - Linux
+   - Shall
+   - Ansible
+   - Terraform
+   - Python
+   live: true #boolean
+   tools: #map/dictionary
+    ci: jenkins
+    cm: Ansible
+    cloud: AWS
+
+  tasks:
+  - name: data types declaration
+    ansible.builtin.debug
