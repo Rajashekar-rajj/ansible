@@ -18,4 +18,4 @@
 
   tasks:
   - name: data types declaration
-    ansible.builtin.debug
+    ansible.builtin.debug:
