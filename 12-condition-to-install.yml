@@ -5,13 +5,13 @@
   - name: printing the stats
     ansible.builtin.debug:
       msg: "facts are: {{ ansible_facts }}"
-  tasks: 
-  - name: in stalling the Nginx through Redhat
+ 
+  - name: installing the Nginx through Redhat
     ansible.builtin.dnf:
       name: nginx
       state: present
     when: ansible_os_family == "RedHat"
-  tasks:
+  
   - name: installing nginx in Debian
     ansible.builtin.apt:
       name: nginx
