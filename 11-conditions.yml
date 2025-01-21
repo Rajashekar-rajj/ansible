@@ -1,0 +1,15 @@
+- name: condition to find the values
+  hosts: local
+  var_promt:
+    name: number
+    prompt: "Please enter the number"
+    private: false 
+  tasks: 
+  - name: print this if greater than 10 or equal to 10
+    ansible.builtin.debug:
+      msg: "given {{ number}} is greater than 10 or equal to 10"
+    when: number | int >= 10 
+  - name: print this if less than 10
+    ansible.builtin.debug:
+      msg : "the given {{ number }} is less than 10"
+    when: number | int < 10
