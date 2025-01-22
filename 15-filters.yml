@@ -5,9 +5,39 @@
   - name: Executing filters
     ansible.builtin.debug:
       msg: "Hello {{ cource | default('Ansible') }}"
-      
+
   - name : convert Upper case
     vars:
       greeting: "Hello Rajj"
     ansible.builtin.debug:
       msg: "{{ greeting | upper }}"
+
+  - name: conver to Lower case
+    vars:
+      greeting: "Hello Rajj" 
+    ansible.builtin.debug:
+      msg: "{{ greeting | lower }}"
+
+  - name: numbers without duplicates
+    vars:
+      numbers: [1,2,3,4,5,2,1,4]
+    ansible.builtin.debug:
+      msg: "{{ numbers | unique }}"
+
+  - name: min and max
+    vars:
+      numbers: [1,2,3,4,5,2,1,4]
+    ansible.builtin.debug:
+      msg: "Min: {{ number | min}}, Max{{ number | max }}"
+
+  - name: 
+    vars:
+      details: 
+        name: "Rajashekar"
+        learing: "DevOps"
+        office: "TCS"
+    ansible.builtin.debug:
+      msg: "{{ details | dict2items}}"
+      
+
+
