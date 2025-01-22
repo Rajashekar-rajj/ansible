@@ -1,6 +1,6 @@
 - name: applying filters
   hosts: local
-  connection: loal
+  connection: local
   tasks: 
   - name: Executing filters
     ansible.builtin.debug:
