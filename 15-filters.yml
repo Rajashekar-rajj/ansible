@@ -39,8 +39,10 @@
     ansible.builtin.debug:
       msg: "{{ details | dict2items}}"
 
-  - name: command exection
-    ansible.bulitin.shell: ls-l /temp/output.txt
+  - name: check the process
+    ansible.builtin.shell: ps -ef | grep ssh
+    register: output
+
 
   
 
