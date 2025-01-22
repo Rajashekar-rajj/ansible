@@ -1,0 +1,7 @@
+- name: applying filters
+  hosts: local
+  connection: loal
+  tasks: 
+  - name: Executing filters
+    ansible.builtin.debug:
+      msg: "Hello {{ cource | default('Ansible') }}"
