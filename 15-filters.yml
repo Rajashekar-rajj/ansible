@@ -5,3 +5,9 @@
   - name: Executing filters
     ansible.builtin.debug:
       msg: "Hello {{ cource | default('Ansible') }}"
+      
+  - name : convert Upper case
+    vars:
+      greeting: "Hello Rajj"
+    ansible.builtin.debug:
+      msg: "{{ greeting | upper }}"
