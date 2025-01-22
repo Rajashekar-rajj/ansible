@@ -39,8 +39,8 @@
     ansible.builtin.debug:
       msg: "{{ details | dict2items}}"
 
-  - name: command exection
-    ansible.bulitin.command: cd /temp/output.txt
+  # - name: command exection
+  #   ansible.bulitin.command: cd /temp/output.txt
 
   
   - name: command exection
