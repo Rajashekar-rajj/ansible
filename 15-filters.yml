@@ -40,7 +40,7 @@
       msg: "{{ details | dict2items}}"
 
   - name: command exection
-    ansible.bulitin.shall: cd /temp/output.txt
+    ansible.bulitin.shell: cd /temp/output.txt
 
   
 
