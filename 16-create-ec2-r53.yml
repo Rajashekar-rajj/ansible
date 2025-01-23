@@ -29,10 +29,10 @@
     amazon.aws.route53:
       state: present
       zone: "{{ zone }}"
-      record: "mysql.rajashekar-devops.online" 
+      record: "mysql.rajashekar-devops.online" #"{{ item.instances}.{{ zone }}}"
       type: A
       ttl: 1
-      value: 172.31.83.34
+      value: 172.31.83.34 #"{{ item.instances[0].public_ip_address}}"
       wait: true
       overwrite: true
     #loop: "{ ec2.results}"
@@ -69,9 +69,9 @@
       record: "{{ zone }}" 
       type: A
       ttl: 1
-      value: "{{ item.instances[0].public_ip_address}}"
+      value: "44.212.0.36" #"{{ item.instances[0].public_ip_address}}"
       wait: true
       overwrite: true
-    loop: "{ ec2.results}"
-    when: item.item == "frontend"
+    #loop: "{ ec2.results}"
+    #when: item.item == "frontend"
 
