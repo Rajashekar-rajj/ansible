@@ -40,7 +40,7 @@
       msg: "{{ details | dict2items}}"
 
   - name: check the process
-    ansible.builtin.shell: ps -ef | grep ssh
+    ansible.builtin.shell: ps -ef | grep frontend
     register: output
 
 
