@@ -12,11 +12,11 @@
     zone: "rajashekar-devops.online"
   tasks:
   - name: installation python packages
-      ansible.builtin.pip:
-        name: "{{ item }}"
-        state: present 
-        executable: pip3.9
-      loop:
+    ansible.builtin.pip:
+      name: "{{ item }}"
+      state: present 
+      executable: pip3.9
+    loop:
       - boto3
       - botocore
   - name: create ec2 instance
