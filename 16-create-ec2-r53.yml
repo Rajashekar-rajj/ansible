@@ -40,7 +40,7 @@
       record: "mysql.rajashekar-devops.online" #"{{ item.instances}.{{ zone }}}"
       type: A
       ttl: 1
-      value: 172.31.86.184 #"{{ item.instances[0].public_ip_address}}"
+      value: 172.31.91.186 #"{{ item.instances[0].public_ip_address}}"
       wait: true
       overwrite: true
     #loop: "{ ec2.results}"
@@ -52,7 +52,7 @@
       record: "backend.rajashekar-devops.online" 
       type: A
       ttl: 1
-      value: 172.31.82.128
+      value: 172.31.89.24
       wait: true
       overwrite: true
     #loop: "{ ec2.results}"
@@ -64,7 +64,7 @@
       record: "frontend.rajashekar-devops.online" 
       type: A
       ttl: 1
-      value: 172.31.80.7
+      value: 172.31.85.190
       wait: true
       overwrite: true
     #loop: "{ ec2.results}"
@@ -77,7 +77,7 @@
       record: "{{ zone }}" 
       type: A
       ttl: 1
-      value: 54.152.146.150 #"{{ item.instances[0].public_ip_address}}"
+      value: 35.172.114.211 #"{{ item.instances[0].public_ip_address}}"
       wait: true
       overwrite: true
     #loop: "{ ec2.results}"
