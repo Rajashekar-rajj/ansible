@@ -2,7 +2,7 @@
   hosts: local
   connection: local
   vars:
-    subnet_id: subnet-0ff9ee20edf0ed71f
+    subnet_id: "subnet-0ff9ee20edf0ed71f"
     sg_id: "sg-02fc3e5136234f59b"
     ami_id: "ami-09c813fb71547fc4f"
     instances: 
@@ -31,7 +31,7 @@
 
   - name: output
     ansible.builtin.debug:
-      msg: "output {{ ec2}}"
+      msg: "output {{ ec2 }}"
   
   - name: creating route53 instance
     amazon.aws.route53:
@@ -39,8 +39,8 @@
       zone: "{{ zone }}"
       record: "mysql.rajashekar-devops.online" #"{{ item.instances}.{{ zone }}}"
       type: A
-      ttl: 1
-      value: 172.31.91.186 #"{{ item.instances[0].public_ip_address}}"
+      ttl: 172.31.95.15
+      value:  #"{{ item.instances[0].public_ip_address}}"
       wait: true
       overwrite: true
     #loop: "{ ec2.results}"
@@ -52,7 +52,7 @@
       record: "backend.rajashekar-devops.online" 
       type: A
       ttl: 1
-      value: 172.31.89.24
+      value: 172.31.80.179
       wait: true
       overwrite: true
     #loop: "{ ec2.results}"
@@ -64,7 +64,7 @@
       record: "frontend.rajashekar-devops.online" 
       type: A
       ttl: 1
-      value: 172.31.85.190
+      value: 172.31.89.133
       wait: true
       overwrite: true
     #loop: "{ ec2.results}"
@@ -77,7 +77,7 @@
       record: "{{ zone }}" 
       type: A
       ttl: 1
-      value: 35.172.114.211 #"{{ item.instances[0].public_ip_address}}"
+      value: 3.84.42.125 #"{{ item.instances[0].public_ip_address}}"
       wait: true
       overwrite: true
     #loop: "{ ec2.results}"
