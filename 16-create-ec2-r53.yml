@@ -39,8 +39,8 @@
       zone: "{{ zone }}"
       record: "mysql.rajashekar-devops.online" #"{{ item.instances}.{{ zone }}}"
       type: A
-      ttl: 172.31.95.15
-      value:  #"{{ item.instances[0].public_ip_address}}"
+      ttl: 1
+      value: 172.31.95.15 #"{{ item.instances[0].public_ip_address}}"
       wait: true
       overwrite: true
     #loop: "{ ec2.results}"
